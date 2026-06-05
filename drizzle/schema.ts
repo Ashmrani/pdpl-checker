@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { int, json, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -25,4 +25,29 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Stores the result of each website privacy scan.
+ */
+export const scans = mysqlTable("scans", {
+  id: int("id").autoincrement().primaryKey(),
+  /** The normalized URL that was scanned. */
+  url: varchar("url", { length: 2048 }).notNull(),
+  /** Hostname for display/grouping. */
+  hostname: varchar("hostname", { length: 512 }).notNull(),
+  /** Overall letter grade A-F. */
+  grade: varchar("grade", { length: 2 }).notNull(),
+  /** Numeric privacy score 0-100. */
+  score: int("score").notNull(),
+  /** Total cookies detected. */
+  cookieCount: int("cookieCount").notNull(),
+  /** Total third-party trackers detected. */
+  trackerCount: int("trackerCount").notNull(),
+  /** PDPL compliance status: compliant | needs_improvement | non_compliant. */
+  pdplStatus: varchar("pdplStatus", { length: 32 }).notNull(),
+  /** Full structured report payload. */
+  report: json("report").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Scan = typeof scans.$inferSelect;
+export type InsertScan = typeof scans.$inferInsert;
