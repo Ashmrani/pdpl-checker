@@ -37,5 +37,12 @@
 
 ## Delivery
 - [x] Check status, fix errors
-- [ ] Save checkpoint
-- [ ] Deliver to user
+- [x] Save checkpoint
+- [x] Deliver to user
+
+## Dark Mode (new request)
+- [x] Enable switchable theme in App.tsx (ThemeProvider)
+- [x] Add theme toggle button in SiteHeader
+- [x] Verify dark theme tokens look good across all pages/components
+- [x] Verify gauge/category bar colors remain readable in dark mode
+- [x] Test toggle persistence and browser rendering

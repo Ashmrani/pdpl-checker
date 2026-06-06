@@ -1,7 +1,10 @@
 import { Link } from "wouter";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
+import { Button } from "@/components/ui/button";
 
 export default function SiteHeader() {
+  const { theme, toggleTheme } = useTheme();
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
@@ -31,6 +34,19 @@ export default function SiteHeader() {
           >
             عن النظام
           </Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "الوضع النهاري" : "الوضع الليلي"}
+            className="ms-1 h-9 w-9 rounded-lg"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-[1.15rem] w-[1.15rem]" />
+            ) : (
+              <Moon className="h-[1.15rem] w-[1.15rem]" />
+            )}
+          </Button>
         </nav>
       </div>
     </header>

@@ -113,11 +113,11 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  --chart-1: oklch(0.68 0.16 145);
+  --chart-2: oklch(0.7 0.15 85);
+  --chart-3: oklch(0.65 0.2 27);
+  --chart-4: oklch(0.6 0.15 255);
+  --chart-5: oklch(0.55 0.14 255);
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.85 0.005 65);
   --sidebar-accent: oklch(0.274 0.006 286.033);
@@ -213,5 +213,10 @@
       linear-gradient(to right, oklch(0.42 0.13 255 / 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(0.42 0.13 255 / 0.04) 1px, transparent 1px);
     background-size: 36px 36px;
+  }
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.7 0.1 255 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.7 0.1 255 / 0.06) 1px, transparent 1px);
   }
 }
