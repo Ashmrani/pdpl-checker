@@ -46,3 +46,13 @@
 - [x] Verify dark theme tokens look good across all pages/components
 - [x] Verify gauge/category bar colors remain readable in dark mode
 - [x] Test toggle persistence and browser rendering
+
+## PWA (new request)
+- [x] Create app icons (192, 512, maskable, 180) and upload to static assets
+- [x] Add manifest.webmanifest with name, theme, icons, RTL/ar
+- [x] Add service worker for offline app shell caching
+- [x] Register service worker in main.tsx (production only)
+- [x] Add PWA meta tags + manifest link in index.html
+- [x] Add Install App button (beforeinstallprompt)
+- [x] Verify manifest + icons load (200) and standalone display in browser
+- [x] Verify production build emits sw.js + manifest, tests + tsc pass

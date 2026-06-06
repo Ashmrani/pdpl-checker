@@ -1,0 +1,33 @@
+{
+  "name": "فاحص PDPL — خصوصية المواقع",
+  "short_name": "فاحص PDPL",
+  "description": "افحص خصوصية أي موقع ومدى التزامه بنظام حماية البيانات الشخصية السعودي PDPL.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#2952cc",
+  "icons": [
+    {
+      "src": "/manus-storage/pdpl-icon-192_17952e17.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manus-storage/pdpl-icon-512_0c2b675e.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manus-storage/pdpl-icon-maskable-512_3b04870c.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

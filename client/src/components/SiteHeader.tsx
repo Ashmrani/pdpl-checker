@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ShieldCheck, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
+import InstallButton from "./InstallButton";
 
 export default function SiteHeader() {
   const { theme, toggleTheme } = useTheme();
@@ -34,6 +35,9 @@ export default function SiteHeader() {
           >
             عن النظام
           </Link>
+          <span className="mx-1 hidden sm:inline-flex">
+            <InstallButton />
+          </span>
           <Button
             variant="ghost"
             size="icon"
